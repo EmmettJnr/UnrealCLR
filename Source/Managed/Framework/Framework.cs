@@ -45,6 +45,8 @@ namespace UnrealEngine.Framework {
 			if (stringBuffer == null)
 				stringBuffer = GC.AllocateUninitializedArray<byte>(8192, pinned: true);
 
+			Array.Clear(stringBuffer, 0, stringBuffer.Length);
+
 			return stringBuffer;
 		}
 	}
